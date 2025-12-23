@@ -1,3 +1,5 @@
+import Button from "@mui/material/Button";
+
 export default function Home() {
   return (
     <section className=" w-full flex justify-between items-center px-10 py-4 gap-5 " >
@@ -11,10 +13,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap gap-3">
-          <a
-            href="/projects"
-            className="px-4 py-2 "
-          >
+          <a href="/projects" className="px-4 py-2 border rounded">
             View Projects
           </a>
           <a href="/about" className="px-4 py-2 border rounded">

@@ -29,7 +29,7 @@
 }
 
 .dark {
-  --background: #070d1b;
+  --background: #050914;
   --surface: #020617;
   --text: #e5e7eb;
   --text-secondary: #94a3b8;
@@ -51,3 +51,14 @@ body {
 /* nav {
    background: var(--background); 
 } */
+
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+  -webkit-animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
