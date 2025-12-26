@@ -6,3 +6,9 @@ export interface Project {
     projectUrl: string;
     technologies: string[];
 }
+
+export interface Technology {
+    id: string;
+    name: string;
+    imgLink: string;
+}

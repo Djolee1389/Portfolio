@@ -19,7 +19,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
 
-          <main className=" mx-25 my-10 px-6 py-7 ">
+          <main className=" mx-25 my-5 px-6 py-7 ">
             {children}
           </main>
         </Providers>

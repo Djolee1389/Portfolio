@@ -22,17 +22,17 @@
 :root {
   --background: #f8fafc;
   --surface: #ffffff;
-  --text: #0f172a;
-  --text-secondary: #475569;
+  --primary: #0f172a;
+  --secondary: #475569;
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
 }
 
 .dark {
   --background: #050914;
-  --surface: #020617;
-  --text: #e5e7eb;
-  --text-secondary: #94a3b8;
+  --surface: #080d27;
+  --primary: #e5e7eb;
+  --secondary: #94a3b8;
   --accent: #38bdf8;
   --accent-hover: #0ea5e9;
 }
@@ -48,9 +48,17 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* nav {
-   background: var(--background); 
-} */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--accent);
+  border-radius: 5px;
+}
 
 .blink {
   animation: blink-animation 1s steps(2, start) infinite;
