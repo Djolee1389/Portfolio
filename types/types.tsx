@@ -11,4 +11,6 @@ export interface Technology {
     id: string;
     name: string;
     imgLink: string;
+    filter?: string;
+    category?: string;
 }
