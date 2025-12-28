@@ -15,10 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background">
+      <body className="bg-background relative">
         <Providers>
           <Navbar />
-
+          {/* <div className="ab"></div> */}
           <main className=" mx-25 my-5 px-6 py-7 ">
             {children}
           </main>

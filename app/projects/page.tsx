@@ -4,13 +4,13 @@ import LaunchIcon from "@mui/icons-material/Launch";
 
 export default function Projects() {
   return (
-    <section className=" flex flex-col items-center">
-      <h1 className="text-[3rem] font-bold mb-8">Projects</h1>
+    <section className=" flex flex-col items-center ">
+      <h1 className=" font-bold mb-8">Projects</h1>
       <div>
         {projects.map((project) => (
           <div
             key={project.id}
-            className="mb-8 flex gap-40 items-center not-odd:flex-row-reverse border rounded-xl pr-10 not-odd:pl-10 not-odd:pr-0 overflow-hidden transform transition-transform duration-200 hover:scale-105"
+            className="mb-8 flex gap-40 items-center hover:bg-(--surface) not-odd:flex-row-reverse border rounded-xl pr-10 not-odd:pl-10 not-odd:pr-0 overflow-hidden transform transition-transform duration-200 hover:scale-105"
           >
             <div className="rounded-md">
               <img
@@ -19,10 +19,10 @@ export default function Projects() {
                 className="aspect-square w-80 bg-white rounded-xl border"
               />
             </div>
-            <div>
+            <div className="flex flex-col justify-between p-2 flex-1">
               <div className="mb-4">
-                <h2 className="text-4xl font-bold mb-2">{project.title}</h2>
-                <p className="mb-8 text-(--text-secondary)">
+                <h2 className=" mb-2">{project.title}</h2>
+                <p className="mb-8 text-(--secondary)">
                   {project.description}
                 </p>
                 <Button

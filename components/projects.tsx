@@ -72,6 +72,22 @@ export const TechnologiesList: Technology[] = [
       category: "Frontend",
   },
   {
+    id: "c",
+    name: "C",
+    imgLink: "/images/icons/c.svg",
+    filter:
+      "invert(100%) sepia(60%) saturate(2084%) hue-rotate(174deg) brightness(82%) contrast(94%)",
+      category: "Programming Language",
+  },
+  {
+    id: "cpp",
+    name: "C++",
+    imgLink: "/images/icons/cplusplus.svg",
+    filter:
+      "invert(15%) sepia(89%) saturate(3478%) hue-rotate(193deg) brightness(93%) contrast(101%)",
+      category: "Programming Language",
+  },
+  {
     id: "nodejs",
     name: "Node.js",
     imgLink: "/images/icons/nodedotjs.svg",
@@ -136,22 +152,7 @@ export const TechnologiesList: Technology[] = [
       "invert(2%) sepia(6%) saturate(988%) hue-rotate(315deg) brightness(94%) contrast(86%)",
     category: "Version Control",
   },
-  {
-    id: "c",
-    name: "C",
-    imgLink: "/images/icons/c.svg",
-    filter:
-      "invert(100%) sepia(60%) saturate(2084%) hue-rotate(174deg) brightness(82%) contrast(94%)",
-      category: "Programming Language",
-  },
-  {
-    id: "cpp",
-    name: "C++",
-    imgLink: "/images/icons/cplusplus.svg",
-    filter:
-      "invert(15%) sepia(89%) saturate(3478%) hue-rotate(193deg) brightness(93%) contrast(101%)",
-      category: "Programming Language",
-  },
+  
   // {
   //   id: "csharp",
   //   name: "C#",
