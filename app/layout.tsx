@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "../components/navbar";
 import "./globals.css";
 import { Providers } from "./providers";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Djordje Milutin | Portfolio",
@@ -15,13 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background relative">
+      <body>
         <Providers>
           <Navbar />
           {/* <div className="ab"></div> */}
-          <main className=" mx-25 my-5 px-6 py-7 ">
+          <main className="min-h-screen flex ">
             {children}
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>

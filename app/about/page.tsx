@@ -5,7 +5,7 @@ type GroupedTechnologies = Record<string, Technology[]>;
 
 const groupedTechnologies: GroupedTechnologies = TechnologiesList.reduce(
   (acc, tech) => {
-    if (!tech.category) return acc; 
+    if (!tech.category) return acc;
     if (!acc[tech.category]) acc[tech.category] = [];
     acc[tech.category].push(tech);
     return acc;
@@ -15,48 +15,61 @@ const groupedTechnologies: GroupedTechnologies = TechnologiesList.reduce(
 
 export default function About() {
   return (
-    <section className="flex flex-col items-center justify-center ">
-      <h1 className=" mb-4">About Me</h1>
-      <div className=" w-5xl text-center space-y-5 ">
-        <p className="">
-          I'm a passionate developer with experience in building modern web
-          applications.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sint magni corrupti molestiae obcaecati ab molestias non nobis ex perspiciatis, porro enim ea libero! Dicta quos reiciendis magnam doloribus magni!
-        </p>
-      </div>
+    <div>
+      <section className="min-h-screen flex flex-col items-center justify-center px-20 ">
+        <h1 className=" mb-4">About Me</h1>
+        <div className="  text-center space-y-5 ">
+          <p className="">
+            I'm a passionate developer with experience in building modern web
+            applications.
+          </p>
+          <p className="w-3/4 mx-auto text-l leading-relaxed ">
+            Bavim se razvojem web aplikacija sa fokusom na pisanje čitljivog,
+            strukturisanog i održivog koda. Kroz rad na ličnim projektima stekao
+            sam iskustvo u JavaScript i TypeScript ekosistemu, posebno u React i
+            Next.js okruženju, gdje gradim moderne korisničke interfejse i
+            povezujem ih sa različitim servisima i API-jima. Posebnu pažnju
+            posvećujem organizaciji koda, ponovnoj upotrebljivosti komponenti i
+            osnovnim principima dobrog korisničkog iskustva. Tehnologije ispod
+            predstavljaju alate koje koristim u praksi i s kojima kontinuirano
+            unapređujem svoje znanje kroz nove projekte i učenje.
+          </p>
+        </div>
+      </section>
+      <section className="mb-20">
+        <div className="flex flex-col items-center mt-">
+          <h2 className="mb-6">Skills</h2>
 
-      <div className="flex flex-col items-center mt-6">
-        <h2 className="text-xl font-semibold mb-6">Skills</h2>
-
-       <div className="w-full flex flex-wrap items-center justify-center">
-          {Object.entries(groupedTechnologies).map(([category, techs]) => (
-            <div
-              key={category}
-              className="mx-10 my-5 flex items-center flex-col "
-            >
-              <h3 className="text-lg font-medium mb-4 capitalize">{category}</h3>
-              <div className="flex flex-wrap gap-5 justify-center">
-                {techs.map((tech) => (
-                  <div
-                    key={tech.id}
-                    className="flex flex-col items-center justify-center border w-25 aspect-square rounded-lg border-(--accent) hover:scale-110 transform transition-transform duration-200 hover:border-(--accent-hover) hover:bg-(--surface)"
-                  >
-                    <img
-                      src={tech.imgLink}
-                      alt={tech.name}
-                      className="w-10 h-10 mb-3"
-                      style={{ filter: tech.filter }}
-                    />
-                    <span className="text-sm">{tech.name}</span>
-                  </div>
-                ))}
+          <div className="w-full flex flex-wrap items-center justify-center px-30 md:px-0 ">
+            {Object.entries(groupedTechnologies).map(([category, techs]) => (
+              <div
+                key={category}
+                className="mx-10 my-5 flex items-center flex-col "
+              >
+                <h3 className="text-lg font-medium mb-4 capitalize">
+                  {category}
+                </h3>
+                <div className="flex flex-wrap gap-5 justify-center">
+                  {techs.map((tech) => (
+                    <div
+                      key={tech.id}
+                      className="flex flex-col items-center justify-center border w-25 aspect-square rounded-lg border-(--accent) hover:scale-110 transform transition-transform duration-200 hover:border-(--accent-hover) hover:bg-(--surface) "
+                    >
+                      <img
+                        src={tech.imgLink}
+                        alt={tech.name}
+                        className="w-10 aspect-square mb-3 "
+                        style={{ filter: tech.filter }}
+                      />
+                      <span className="text-sm">{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-       </div>
-      </div>
-    </section>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
