@@ -100,7 +100,7 @@ export const TechnologiesList: Technology[] = [
     name: "Next.js",
     imgLink: "/images/icons/nextdotjs.svg",
     filter:
-      "invert(0%) sepia(6%) saturate(35%) hue-rotate(325deg) brightness(94%) contrast(100%)",
+      "invert(40%) sepia(6%) saturate(35%) hue-rotate(325deg) brightness(94%) contrast(100%)",
       category: "Frontend",
   },
 
@@ -149,7 +149,7 @@ export const TechnologiesList: Technology[] = [
     name: "GitHub",
     imgLink: "/images/icons/github.svg",
     filter:
-      "invert(2%) sepia(6%) saturate(988%) hue-rotate(315deg) brightness(94%) contrast(86%)",
+      "invert(32%) sepia(6%) saturate(988%) hue-rotate(315deg) brightness(94%) contrast(86%)",
     category: "Version Control",
   },
   

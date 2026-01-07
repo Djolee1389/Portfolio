@@ -15,15 +15,17 @@ const groupedTechnologies: GroupedTechnologies = TechnologiesList.reduce(
 
 export default function About() {
   return (
-    <div>
-      <section className="min-h-screen flex flex-col items-center justify-center px-20 ">
+    <div >
+      <section className="min-h-screen flex flex-col items-center justify-center px-20 mt-45 md:mt-0">
         <h1 className=" mb-4">About Me</h1>
         <div className="  text-center space-y-5 ">
-          <p className="">
+          <p className="text-(--secondary)">
             I'm a passionate developer with experience in building modern web
             applications.
           </p>
-          <p className="w-3/4 mx-auto text-l leading-relaxed ">
+          <p className=" mx-auto text-l leading-relaxed " 
+            style={{ textWrap: "balance" }}
+          >
             Bavim se razvojem web aplikacija sa fokusom na pisanje čitljivog,
             strukturisanog i održivog koda. Kroz rad na ličnim projektima stekao
             sam iskustvo u JavaScript i TypeScript ekosistemu, posebno u React i
@@ -36,11 +38,11 @@ export default function About() {
           </p>
         </div>
       </section>
-      <section className="mb-20">
-        <div className="flex flex-col items-center mt-">
+      <section className="mb-20 ">
+        <div className="flex flex-col items-center ">
           <h2 className="mb-6">Skills</h2>
 
-          <div className="w-full flex flex-wrap items-center justify-center px-30 md:px-0 ">
+          <div className="w-full flex flex-wrap items-center justify-center">
             {Object.entries(groupedTechnologies).map(([category, techs]) => (
               <div
                 key={category}

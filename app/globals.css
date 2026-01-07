@@ -20,7 +20,7 @@
 }
 
 :root {
-  --background: beige;
+  --background: rgb(244, 244, 216);
   --surface: #ffffff;
   --primary: #0f172a;
   --secondary: #475569;
@@ -30,8 +30,8 @@
 }
 
 .dark {
-  --background: #050914;
-  --surface: #0b102f;
+  --background: #0b102f;
+  --surface: #232f55;
   --primary: #e5e7eb;
   --secondary: #94a3b8;
   --accent: #38bdf8;
@@ -58,16 +58,15 @@ h4,
 h5,
 h6 {
   color: var(--primary);
+  font-weight: bold;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: bold;
 }
 
 h2{
   font-size: 2rem;
-  font-weight: bold;
 }
 
 nav {
@@ -114,6 +113,7 @@ nav {
   border-radius: 5px;
 }
 
+
 .blink {
   animation: blink-animation 1s steps(2, start) infinite;
   -webkit-animation: blink-animation 1s steps(2, start) infinite;
@@ -142,3 +142,6 @@ nav {
 
   pointer-events: none;
 }
+
+
+
