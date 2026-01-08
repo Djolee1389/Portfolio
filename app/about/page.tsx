@@ -15,15 +15,16 @@ const groupedTechnologies: GroupedTechnologies = TechnologiesList.reduce(
 
 export default function About() {
   return (
-    <div >
-      <section className="min-h-screen flex flex-col items-center justify-center px-20 mt-45 md:mt-0">
+    <div>
+      <section className="min-h-screen flex flex-col items-center justify-center px-4 lg:px-20 mt-30 md:mt-0">
         <h1 className=" mb-4">About Me</h1>
         <div className="  text-center space-y-5 ">
           <p className="text-(--secondary)">
             I'm a passionate developer with experience in building modern web
             applications.
           </p>
-          <p className=" mx-auto text-l leading-relaxed " 
+          <p
+            className=" mx-auto text-l leading-relaxed "
             style={{ textWrap: "balance" }}
           >
             Bavim se razvojem web aplikacija sa fokusom na pisanje čitljivog,
@@ -38,32 +39,32 @@ export default function About() {
           </p>
         </div>
       </section>
-      <section className="mb-20 ">
+      <section className="mb-20 mt-20 lg:mt-0 px-4 lg:px-30">
         <div className="flex flex-col items-center ">
           <h2 className="mb-6">Skills</h2>
 
-          <div className="w-full flex flex-wrap items-center justify-center">
+          <div className="w-full flex flex-wrap items-center justify-center ">
             {Object.entries(groupedTechnologies).map(([category, techs]) => (
               <div
                 key={category}
-                className="mx-10 my-5 flex items-center flex-col "
+                className="mx-6 my-5  flex items-center  flex-col lg:mx-10 "
               >
                 <h3 className="text-lg font-medium mb-4 capitalize">
                   {category}
                 </h3>
-                <div className="flex flex-wrap gap-5 justify-center">
+                <div className="flex flex-wrap gap-4 justify-center md:gap-5">
                   {techs.map((tech) => (
                     <div
                       key={tech.id}
-                      className="flex flex-col items-center justify-center border w-25 aspect-square rounded-lg border-(--accent) hover:scale-110 transform transition-transform duration-200 hover:border-(--accent-hover) hover:bg-(--surface) "
+                      className="flex flex-col items-center justify-center border w-20 aspect-square rounded-lg border-(--accent) hover:scale-110 transform transition-transform duration-200 hover:border-(--accent-hover) hover:bg-(--surface) md:w-25"
                     >
                       <img
                         src={tech.imgLink}
                         alt={tech.name}
-                        className="w-10 aspect-square mb-3 "
+                        className="w-8 aspect-square mb-3 md:w-10"
                         style={{ filter: tech.filter }}
                       />
-                      <span className="text-sm">{tech.name}</span>
+                      <span className="text-xs md:text-sm">{tech.name}</span>
                     </div>
                   ))}
                 </div>

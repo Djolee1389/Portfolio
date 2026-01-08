@@ -14,9 +14,9 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="mb-8 w-full flex flex-col lg:flex-row gap-10 items-center justify-center hover:bg-(--surface) lg:odd:flex-row lg:even:flex-row-reverse border rounded-xl overflow-hidden transform transition-transform duration-200 hover:scale-105 p-4 sm:p-6 lg:p-8"
+              className="mb-8 w-full flex flex-col lg:flex-row gap-10 items-center justify-center hover:bg-(--surface)  border rounded-xl overflow-hidden transform transition-transform duration-200 hover:scale-105 p-4 sm:p-6 lg:p-8 rev"
             >
-              <div className="rounded-md w-full md:w-1/3 flex justify-center">
+              <div className="rounded-md w-full md:w-1/2 lg:w-1/3 flex justify-center">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
@@ -41,7 +41,7 @@ export default function Projects() {
                       "&:hover": {
                         border: "1px solid var(--accent-hover)",
                         backgroundColor: "var(--accent-hover)",
-                        color: "var(--primary)",
+                        color: "#fff",
                       },
                       mb: "10px",
                     }}

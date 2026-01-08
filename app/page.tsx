@@ -4,8 +4,8 @@ import ButtonLinks from "@/components/ButtonLinks";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-between w-full px-4 sm:px-8 md:px-15 lg:px-20 gap-8 sm:gap-10 md:flex-row">
-      <div className="flex justify-center items-center flex-col h-screen md:h-full md:w-1/2 md:items-start">
+    <section className="flex flex-col-reverse items-center justify-center md:justify-between w-full px-4 sm:px-8 md:px-15 lg:px-20 gap-8 sm:gap-10 md:flex-row">
+      <div className="flex justify-center items-center flex-col h-fit md:h-full md:w-1/2 md:items-start">
         <h1 className="mb-2 text-3xl sm:text-4xl md:text-5xl">
           Djordje Milutin
         </h1>
@@ -29,11 +29,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-90">
+      <div className="w-1/2 md:w-140 ">
         <img
-          src="/images/icons/gt.svg"
+          src="/images/avatarPortfolio.png"
           alt="Profile Picture"
-          className="w-full h-120 rounded-md object-cover shadow-md bg-white"
+          className="w-full rounded-md object-cover "
         />
       </div>
     </section>
