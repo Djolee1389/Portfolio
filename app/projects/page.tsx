@@ -9,12 +9,12 @@ export default function Projects() {
         <h1 className="  mb-8">Projects</h1>
         <p className="text-center mb-8">Here are some of my recent projects.</p>
       </section>
-      <section className="w-full max-w-6xl mx-auto p-7">
+      <section className="w-full max-w-6xl mx-auto p-7 mt-[-160]">
         <div>
           {projects.map((project) => (
             <div
               key={project.id}
-              className="mb-8 w-full flex flex-col lg:flex-row gap-10 items-center justify-center hover:bg-(--surface)  border rounded-xl overflow-hidden transform transition-transform duration-200 hover:scale-105 p-4 sm:p-6 lg:p-8 rev"
+              className="mb-8 w-full flex flex-col lg:flex-row gap-10 items-center justify-center hover:bg-(--surface)  border rounded-xl overflow-hidden transform transition-transform duration-200 hover:scale-105 p-4 sm:p-6  rev"
             >
               <div className="rounded-md w-full md:w-1/2 lg:w-1/3 flex justify-center">
                 <img

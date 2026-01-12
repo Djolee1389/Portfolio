@@ -23,7 +23,7 @@
   --background: rgb(244, 244, 216);
   --surface: #ffffff;
   --primary: #0f172a;
-  --secondary: #475569;
+  --secondary: #3c4b61;
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -33,7 +33,7 @@
   --background: #0b102f;
   --surface: #121c3e;
   --primary: #e5e7eb;
-  --secondary: #94a3b8;
+  --secondary: #8492a5;
   --accent: #38bdf8;
   --accent-hover: #0ea5e9;
   --box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 12px;
@@ -62,12 +62,18 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.b{
+  color:#0f172a;
 }
 
 h2{
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
 }
+
+
 
 nav {
   background: var(--background);

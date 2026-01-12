@@ -20,9 +20,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {/* <div className="ab"></div> */}
-          <main className="min-h-screen flex ">
-            {children}
-          </main>
+          <main className="min-h-screen flex ">{children}</main>
           <Footer />
         </Providers>
       </body>
