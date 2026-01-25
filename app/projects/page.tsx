@@ -5,7 +5,7 @@ import LaunchIcon from "@mui/icons-material/Launch";
 export default function Projects() {
   return (
     <div className="w-full flex flex-col items-center mb-20">
-      <section className="min-h-screen flex flex-col items-center justify-center">
+      <section className="min-h-dvh flex flex-col items-center justify-center">
         <h1 className="  mb-8">Projects</h1>
         <p className="text-center mb-8">Here are some of my recent projects.</p>
       </section>

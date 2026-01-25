@@ -15,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full sticky top-0 flex justify-between items-center px-8 py-7 z-50 sm:px-15">
+    <nav className="w-full  sticky top-0 flex justify-between items-center px-8 py-7 z-50 sm:px-15">
       <span className="font-bold text-lg sm:text-xl">
         {">"} {process.env.NEXT_PUBLIC_NAME_KEY} <span className="blink">{"_"}</span>
       </span>
