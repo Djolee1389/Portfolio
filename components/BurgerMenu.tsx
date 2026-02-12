@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeSwitch from "./ThemeSwitch";
+import LanguageSwitch from "./LanguageSwitch";
+import { useTranslations } from "next-intl";
 
 export const BurgerMenu = () => {
+  const t = useTranslations("Navigation");
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -17,7 +20,6 @@ export const BurgerMenu = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // lock body scroll when menu is open
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (isOpen) {
@@ -67,33 +69,34 @@ export const BurgerMenu = () => {
               className={`nav-link ${isActive("/") ? "active" : ""}`}
               onClick={() => setIsOpen(false)}
             >
-              Home
+              {t("home")}
             </Link>
             <Link
               href="/about"
               className={`nav-link ${isActive("/about") ? "active" : ""}`}
               onClick={() => setIsOpen(false)}
             >
-              About
+              {t("about")}
             </Link>
             <Link
               href="/projects"
               className={`nav-link ${isActive("/projects") ? "active" : ""}`}
               onClick={() => setIsOpen(false)}
             >
-              Projects
+              {t("projects")}
             </Link>
             <Link
               href="/contact"
               className={`nav-link ${isActive("/contact") ? "active" : ""}`}
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              {t("contact")}
             </Link>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-6 flex justify-between items-center  ">
             <ThemeSwitch />
+            <LanguageSwitch />
           </div>
         </div>
       )}

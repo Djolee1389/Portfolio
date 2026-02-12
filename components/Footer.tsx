@@ -1,15 +1,16 @@
 import { Instagram, GitHub } from "@mui/icons-material";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="w-full  py-5 px-7 flex justify-between flex-col items-center border-t mt-10 ">
       <div className="flex justify-between gap-10 items-center w-full">
         <div>
           <p className="text-xs md:text-sm text-(--secondary)">
-            © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_NAME_KEY}. All
-            rights reserved.
+            © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_NAME_KEY}. {t("copyright")}
           </p>
-          
         </div>
         <div className="flex gap-2">
           <a
@@ -32,8 +33,7 @@ export const Footer = () => {
       </div>
       <div>
         <p className="text-[10px]  text-(--secondary) mt-5 md:mt-2 text-center">
-          This site is protected by reCAPTCHA and the Google Privacy Policy and
-          Terms of Service apply.
+          {t("recaptcha")} 
         </p>
       </div>
     </footer>

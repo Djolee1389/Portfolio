@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Footer } from "@/components/Footer";
 import { RecaptchaProviderWrapper } from "@/components/RecaptchaProviderWrapper"; 
+import {NextIntlClientProvider} from 'next-intl';
 
 export const metadata: Metadata = {
   title: "Djordje Milutin | Portfolio",
@@ -18,14 +19,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <RecaptchaProviderWrapper>
-          <Providers>
-            <Navbar />
-            {/* <div className="ab"></div> */}
-            <main className="min-h-screen flex">{children}</main>
-            <Footer />
-          </Providers>
-        </RecaptchaProviderWrapper>
+        <NextIntlClientProvider>
+          <RecaptchaProviderWrapper>
+            <Providers>
+              <Navbar />
+              {/* <div className="ab"></div> */}
+              <main className="min-h-screen flex">{children}</main>
+              <Footer />
+            </Providers>
+          </RecaptchaProviderWrapper>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

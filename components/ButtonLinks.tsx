@@ -2,8 +2,10 @@
 import Button from "@mui/material/Button";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function ButtonLinks({ text }: { text: string }) {
+  const t = useTranslations("Home");
   return (
     <Button
       component={Link} 
@@ -20,7 +22,7 @@ export default function ButtonLinks({ text }: { text: string }) {
         },
       }} 
     >
-      {text} {/* tekst dugmeta ide ovdje */}
+      {t(text)} {/* tekst dugmeta ide ovdje */}
     </Button>
   );
 }

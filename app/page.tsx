@@ -1,8 +1,10 @@
-import Button from "@mui/material/Button";
-import Link from "next/link";
+'use client';
 import ButtonLinks from "@/components/ButtonLinks";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Home");
+
   return (
     <section className="flex flex-col-reverse items-center justify-center md:justify-between xl:justify-evenly w-full px-4 sm:px-8 md:px-15 lg:px-20 gap-8 sm:gap-10 md:flex-row">
       <div className="flex justify-center items-center flex-col h-fit md:h-full md:w-1/2 md:items-start">
@@ -11,21 +13,19 @@ export default function Home() {
         </h1>
         <div className="flex flex-col items-center md:items-start">
           <p className="text-base sm:text-lg md:text-xl mb-10 text-(--secondary)">
-            Web Developer
+            Web developer
           </p>
           <p
             className="mb-6 text-sm sm:text-base md:text-lg text-center md:text-start"
             style={{ textWrap: "balance" }}
           >
-            I design and build web interfaces focused on clarity and
-            performance. This site showcases selected projects, contact details
-            and more about my work.
+            {t("description")}
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 md:gap-4">
-          <ButtonLinks text="View Projects" />
-          <ButtonLinks text="About me" />
+          <ButtonLinks text="viewProjects" />
+          <ButtonLinks text="aboutMe" />
         </div>
       </div>
 

@@ -1,8 +1,10 @@
 import { projects } from "@/components/projects";
 import Button from "@mui/material/Button";
 import LaunchIcon from "@mui/icons-material/Launch";
+import { useTranslations } from "next-intl";
 
 export const ProjectsContainer = () => {
+  const t = useTranslations("Projects");
   return (
     <div>
           {projects.map((project) => (
@@ -19,9 +21,9 @@ export const ProjectsContainer = () => {
               </div>
               <div className="flex flex-col justify-between p-2 flex-1 items-center text-center lg:items-start lg:text-left">
                 <div className="mb-4">
-                  <h2 className=" mb-2">{project.title}</h2>
+                  <h2 className=" mb-2">{t(project.title)}</h2>
                   <p className="mb-8 text-(--secondary)">
-                    {project.description}
+                    {t(project.description)}
                   </p>
                   <Button
                     variant="outlined"
@@ -41,7 +43,7 @@ export const ProjectsContainer = () => {
                     }}
                     className="mx-auto"
                   >
-                    View Project
+                    {t("viewProject")}
                   </Button>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4 justify-center">

@@ -1,29 +1,31 @@
 import { Project } from "@/types/types";
 import { Technology } from "@/types/types";
+import  {useTranslations} from "next-intl";
+
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Izdavanje/Prodaja Nekretnina",
-    description: "A real estate listing platform built with React",
+    title: "rentingTitle",
+    description: "renting",
     imageUrl: "/images/apartments.png",
     projectUrl: "https://github.com/Djolee1389/IzdavanjeStanova",
     technologies: ["React", "Typescript", "CSS", "Firebase", "Leaflet API"],
   },
   {
     id: 2,
-    title: "ChatApp",
+    title: "chatappTitle",
     description:
-      "An social media application with real-time chat functionality.",
+      "chatapp",
     imageUrl: "/images/chat.png",
     projectUrl: "https://github.com/Djolee1389/ChatApp",
     technologies: ["React", "Typescript", "Firebase", "Material UI"],
   },
   {
     id: 3,
-    title: "Fireboy and Watergirl Game",
+    title: "gameTitle",
     description:
-      "A fun and interactive game built with JavaScript and HTML5 Canvas.",
+      "game",
     imageUrl: "/images/game.png",
     projectUrl: "https://github.com/Djolee1389/VatraIVoda",
     technologies: ["HTML", "CSS", "JavaScript"],

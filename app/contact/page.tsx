@@ -2,6 +2,7 @@
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useState } from "react";
 import { Button, TextField, Alert, CircularProgress } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 type FormState = {
   name: string;
@@ -10,6 +11,8 @@ type FormState = {
 };
 
 export default function Contact() {
+  const t = useTranslations("Contact");
+
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
@@ -27,19 +30,19 @@ export default function Contact() {
     const newErrors: Partial<FormState> = {};
 
     if (!form.name.trim()) {
-      newErrors.name = "Ime je obavezno";
+      newErrors.name = t("nameError");
     }
 
     if (!form.email.trim()) {
-      newErrors.email = "Email je obavezan";
+      newErrors.email = t("emailError");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      newErrors.email = "Neispravan email format";
+      newErrors.email = t("emailInvalid");
     }
 
     if (!form.message.trim()) {
-      newErrors.message = "Poruka je obavezna";
+      newErrors.message = t("messageError");
     } else if (form.message.length < 10) {
-      newErrors.message = "Poruka mora imati barem 10 karaktera";
+      newErrors.message = t("messageTooShort");
     }
 
     setErrors(newErrors);
@@ -99,10 +102,10 @@ export default function Contact() {
         autoComplete="off"
         className="flex flex-col w-full max-w-lg bg-white shadow-md rounded-lg p-6 lg:p-10"
       >
-        <h1 className=" text-center mb-2 b">Contact Me</h1>
+        <h1 className=" text-center mb-2 b">{t("title")}</h1>
 
         <p className="text-center mb-8 text-(--secondary)">
-          If you have any questions, feel free to reach out!
+          {t("description")}
         </p>
 
         {serverError && (
@@ -113,12 +116,12 @@ export default function Contact() {
 
         {success && (
           <Alert severity="success" sx={{ mb: 2 }}>
-            Poruka je uspješno poslata.
+            {t("successMessage")}
           </Alert>
         )}
 
         <TextField
-          label="Ime"
+          label={t("name")}
           name="name"
           value={form.name}
           onChange={handleChange}
@@ -145,7 +148,7 @@ export default function Contact() {
         />
 
         <TextField
-          label="Your Message"
+          label={t("message")}
           name="message"
           multiline
           rows={4}
@@ -165,7 +168,7 @@ export default function Contact() {
           disabled={loading}
           sx={{ py: 1.5 }}
         >
-          {loading ? <CircularProgress size={24} /> : "Send"}
+          {loading ? <CircularProgress size={24} /> : t("send")}
         </Button>
       </form>
     </section>

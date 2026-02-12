@@ -1,0 +1,61 @@
+{
+    "Home" :{
+        "description": "I design and build web interfaces with a focus on clarity and performance. This site showcases selected projects, contact information, and more about my work.",
+        "viewProjects": "View Projects",
+        "aboutMe": "About me"
+    }, 
+
+    "Navigation" : {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+
+    "About" :{
+        "title": "About Me",
+        "subtitle": "I'm a passionate developer with experience in building modern web applications.",
+        "description": "I develop web applications with a focus on writing clear, structured, and maintainable code. Through working on personal projects, I have gained experience in the JavaScript and TypeScript ecosystem, particularly in React and Next.js, where I build modern user interfaces and integrate them with various services and APIs. I pay special attention to code organization, component reusability, and fundamental principles of good user experience. The technologies below represent the tools I use in practice and continuously improve my skills with through new projects and learning.",
+        "skills" :"Technologies I use",
+        "Programming Language" :"Programming languages",
+        "Version Control" :"Version control",
+        "Frontend" :"Frontend",
+        "Backend/API" :"Backend/API"
+    },
+
+    "Projects" :{
+        "title": "Projects",
+        "description": "Here are some of the projects I've worked on.",
+        "viewProject": "View Project",
+
+        "renting" : "A real estate listing platform built with React",
+        "chatapp" : "An social media application with real-time chat functionality.",
+        "game" : "A fun and interactive game built with JavaScript and HTML5 Canvas.",
+
+        "rentingTitle": "Real Estate Listing",
+        "chatappTitle": "ChatApp",
+        "gameTitle": "Fireboy and Watergirl Game"
+    },
+
+    "Contact" :{
+        "title": "Contact Me",
+        "description": "If you have any questions, feel free to reach out!",
+        "name": "Name",
+        "message": "Your message",
+        "send": "Send",
+        "nameError": "Please enter your name.",
+        "emailError": "Please enter your email.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageError": "Please enter your message.",
+        "messageTooShort": "Your message must be at least 10 characters long.",
+        "serverError": "An error occurred while sending your message. Please try again later.",
+        "successMessage": "Your message has been sent successfully!"
+
+
+    },
+
+    "Footer":{
+        "recaptcha": "This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.",
+        "copyright": "All rights reserved."
+    }
+}
