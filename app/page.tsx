@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import ButtonLinks from "@/components/ButtonLinks";
 import { useTranslations } from "next-intl";
 
@@ -11,6 +11,7 @@ export default function Home() {
         <h1 className="mb-2 text-3xl text-center md:text-start sm:text-4xl md:text-5xl">
           {process.env.NEXT_PUBLIC_NAME_KEY}
         </h1>
+
         <div className="flex flex-col items-center md:items-start">
           <p className="text-base sm:text-lg md:text-xl mb-10 text-(--secondary)">
             Web developer

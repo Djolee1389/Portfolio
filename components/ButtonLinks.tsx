@@ -9,7 +9,7 @@ export default function ButtonLinks({ text }: { text: string }) {
   return (
     <Button
       component={Link} 
-      href="/projects"
+      href={t(`${text}.linkTo`)}
       variant="outlined" 
       endIcon={<NorthEastIcon />}
       sx={{
@@ -18,11 +18,11 @@ export default function ButtonLinks({ text }: { text: string }) {
         "&:hover": {
           border: "1px solid var(--accent-hover)",
           backgroundColor: "var(--accent-hover)",
-          color: "var(--primary)",
+          color: "#fff",
         },
       }} 
     >
-      {t(text)} {/* tekst dugmeta ide ovdje */}
+      {t(`${text}.text`)} {/* tekst dugmeta ide ovdje */}
     </Button>
   );
 }

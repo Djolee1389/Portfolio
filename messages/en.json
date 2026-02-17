@@ -1,8 +1,14 @@
 {
     "Home" :{
         "description": "I design and build web interfaces with a focus on clarity and performance. This site showcases selected projects, contact information, and more about my work.",
-        "viewProjects": "View Projects",
-        "aboutMe": "About me"
+        "viewProjects": {
+          "text": "View Projects",
+          "linkTo": "/projects"
+        },
+        "aboutMe": {
+          "text": "About me",
+          "linkTo": "/about"
+        }
     }, 
 
     "Navigation" : {
@@ -25,7 +31,7 @@
 
     "Projects" :{
         "title": "Projects",
-        "description": "Here are some of the projects I've worked on.",
+        "description": "Here are projects that showcase my work so far and the practical application of my web development skills. Through them, I have improved my work with modern technologies and developed a better approach to code structure and application design.",
         "viewProject": "View Project",
 
         "renting" : "A real estate listing platform built with React",

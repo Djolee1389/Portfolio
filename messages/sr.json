@@ -1,8 +1,14 @@
 {
   "Home": {
     "description": "Dizajniram i pravim web interfejse sa fokusom na jasnoću i performanse. Ovaj sajt prikazuje odabrane projekte, kontakt informacije i više o mom radu.",
-    "viewProjects": "Pogledaj projekte",
-    "aboutMe": "O meni"
+    "viewProjects": {
+      "text": "Pogledaj projekte",
+      "linkTo": "/projects"
+    },
+    "aboutMe": {
+      "text": "O meni",
+      "linkTo": "/about"
+    }
   },
 
   "Navigation": {
@@ -25,7 +31,7 @@
 
   "Projects": {
     "title": "Projekti",
-    "description": "Ovdje su neki od mojih projekata na kojima sam radio.",
+    "description": "Ovdje su projekti koji prikazuju moj dosadašnji rad i praktičnu primjenu znanja iz web razvoja. Kroz njih sam unapređivao rad sa modernim tehnologijama i razvijao bolji pristup strukturi koda i dizajnu aplikacija.",
     "viewProject": "Pogledaj projekat",
 
     "renting" : "Platforma za izdavanje i prodaju nekretnina napravljena u React-u",

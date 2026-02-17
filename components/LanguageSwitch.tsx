@@ -24,9 +24,10 @@ export default function LanguageSelect() {
       id="language"
       name="language"
       sx={{
-        color: "white",
-        border: "1px solid white",
-        "& .MuiSelect-icon": { color: "white" },
+        color: "var(--default)",
+        border: "1px solid var(--default)",
+        borderColor: "var(--default)",
+        "& .MuiSelect-icon": { color: "var(--default)" },
       }}
     >
       <MenuItem value="sr">SR</MenuItem>

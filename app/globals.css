@@ -11,6 +11,7 @@
   --secondary: #3c4b61;
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
+  --default : #000000;
   --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -21,6 +22,7 @@
   --secondary: #8492a5;
   --accent: #38bdf8;
   --accent-hover: #0ea5e9;
+  --default : #ffffff;
   --box-shadow: rgba(0, 0, 0, 0.6) 0px 4px 12px;
 }
 
