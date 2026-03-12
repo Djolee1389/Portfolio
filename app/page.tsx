@@ -1,6 +1,7 @@
 "use client";
 import ButtonLinks from "@/components/ButtonLinks";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -31,10 +32,13 @@ export default function Home() {
       </div>
 
       <div className="w-1/2 md:w-140 ">
-        <img
+        <Image
           src="/images/avatarPortfolio.png"
           alt="Profile Picture"
-          className="w-full rounded-md object-cover "
+          width={560}
+          height={560}
+          className="w-full rounded-md object-cover"
+          priority
         />
       </div>
     </section>
