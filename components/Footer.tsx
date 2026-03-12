@@ -18,6 +18,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className=" text-(--secondary) hover:text-(--accent)"
+            aria-label="Instagram"
           >
             <Instagram />
           </a>
@@ -26,6 +27,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className=" text-(--secondary) hover:text-(--accent)"
+            aria-label="GitHub"
           >
             <GitHub />
           </a>

@@ -18,6 +18,7 @@ export default function ThemeSwitch() {
       <button
         onClick={() => setTheme("light")}
         className="p-2 rounded-full border aspect-square cursor-pointer "
+        aria-label="Switch to light mode"
       >
         <LightModeIcon />
       </button>
@@ -28,6 +29,7 @@ export default function ThemeSwitch() {
       <button
         onClick={() => setTheme("dark")}
         className="p-2 rounded-full border aspect-square cursor-pointer "
+        aria-label="Switch to dark mode"
       >
         <DarkModeIcon />
       </button>
