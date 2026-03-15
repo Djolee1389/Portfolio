@@ -4,8 +4,11 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { useTranslations } from "next-intl";
 
 export default function ThemeSwitch() {
+  const t = useTranslations("Aria-labels");
+
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -18,7 +21,7 @@ export default function ThemeSwitch() {
       <button
         onClick={() => setTheme("light")}
         className="p-2 rounded-full border aspect-square cursor-pointer "
-        aria-label="Switch to light mode"
+        aria-label={t("lightMode")}
       >
         <LightModeIcon />
       </button>
@@ -29,7 +32,7 @@ export default function ThemeSwitch() {
       <button
         onClick={() => setTheme("dark")}
         className="p-2 rounded-full border aspect-square cursor-pointer "
-        aria-label="Switch to dark mode"
+        aria-label={t("darkMode")}
       >
         <DarkModeIcon />
       </button>

@@ -63,5 +63,13 @@
     "Footer":{
         "recaptcha": "This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.",
         "copyright": "All rights reserved."
+    },
+
+    "Aria-labels":{
+        "languageSelect": "Select language",
+        "lightMode": "Switch to light mode",
+        "darkMode": "Switch to dark mode",
+        "serbian": "Serbian",
+        "english": "English"
     }
 }

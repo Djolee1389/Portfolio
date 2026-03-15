@@ -101,6 +101,7 @@ export default function Contact() {
         onSubmit={handleSubmit}
         autoComplete="off"
         className="flex flex-col w-full max-w-lg bg-white shadow-md rounded-lg p-6 lg:p-10"
+        translate="no"
       >
         <h1 className=" text-center mb-2 b">{t("title")}</h1>
 

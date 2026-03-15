@@ -62,5 +62,13 @@
   "Footer": {
     "recaptcha": "Ovaj sajt je zaštićen reCAPTCHA-om i Google-ovom Politikom privatnosti i Uslovima korišćenja.",
     "copyright": "Sva prava zadržana."
+  },
+
+  "Aria-labels": {
+    "languageSelect": "Izaberite jezik",
+    "lightMode": "Prebaci na svijetli režim",
+    "darkMode": "Prebaci na tamni režim",
+    "serbian": "Srpski",
+    "english": "Engleski"
   }
 }

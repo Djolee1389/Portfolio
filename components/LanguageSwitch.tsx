@@ -1,10 +1,12 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { Select, MenuItem } from "@mui/material";
 
 export default function LanguageSelect() {
+  const t = useTranslations("Aria-labels");
+
   const locale = useLocale();
   const router = useRouter();
 
@@ -29,9 +31,10 @@ export default function LanguageSelect() {
         borderColor: "var(--default)",
         "& .MuiSelect-icon": { color: "var(--default)" },
       }}
+      aria-label={t("languageSelect")}
     >
-      <MenuItem value="sr">SR</MenuItem>
-      <MenuItem value="en">EN</MenuItem>
+      <MenuItem value="sr" aria-label={t("serbian")} >SR</MenuItem>
+      <MenuItem value="en" aria-label={t("english")}>EN</MenuItem>
     </Select>
   );
 }
